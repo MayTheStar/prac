@@ -1,0 +1,23 @@
+name: First-Workflow
+
+on: 
+  push:   # يشتغل كل مره يصير فيه بوش
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Lint
+        run: echo "Running lint script here"
+
+      - name: Test
+        run: echo "Running tests here"
+
+      - name: Build
+        run: echo "Running build script here"
+
+      - name: Deploy
+        run: echo "Deploying project here"
